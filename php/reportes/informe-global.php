@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @font-face {
-            font-family: "sedena-font";
-            src: url("../../font/TCM.otf");
-        }
-
         body {
-            font-family: "sedena-font";
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
         }
 
         table,
@@ -32,19 +28,17 @@
         }
 
         .contenido-doc {
-            width: 90%;
+            width: 100%;
             margin: auto;
-            border: 1px solid #bdbdbd;
-            padding: 5px;
+            /*border: 1px solid #bdbdbd;*/
         }
 
         .encabezado-pie {
             margin: auto;
-            padding-left: 10%;
         }
 
         .info-doc {
-            padding-left: 25px;
+            padding-left: 1px;
         }
     </style>
 </head>
@@ -53,8 +47,9 @@
 
     <div class="contenido-doc">
         <div class="encabezado-pie">
-            <img src="../../img/encabezado.png" alt="" style="width: 1400px;">
+            <img src="https://i.imgur.com/1nGFSBx.png" alt="" style="width: 740px;">
         </div>
+        <p>&nbsp;</p>
         <p>&nbsp;</p>
         <div class="info-doc">
             <h1><span style="color: #63A537;">Informe de MIR</span></h1>
@@ -84,8 +79,9 @@
             </ul>
         </div>
         <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <div class="encabezado-pie">
-            <img src="../../img/pie.png" alt="" style="width: 1400px;">
+            <img src="https://i.imgur.com/zRazHrC.png" alt="" style="width: 740px;">
             <p>&nbsp;</p>
         </div>
     </div>
