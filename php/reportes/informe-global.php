@@ -47,8 +47,10 @@
 
     <div class="contenido-doc">
         <div class="encabezado-pie">
-            <img src="https://i.imgur.com/1nGFSBx.png" alt="" style="width: 740px;">
+            <img src="https://i.imgur.com/1nGFSBx.png" alt="" style="width: 700px;">
         </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <div class="info-doc">
@@ -81,7 +83,7 @@
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <div class="encabezado-pie">
-            <img src="https://i.imgur.com/zRazHrC.png" alt="" style="width: 740px;">
+            <img src="https://i.imgur.com/zRazHrC.png" alt="" style="width: 700px;">
             <p>&nbsp;</p>
         </div>
     </div>
