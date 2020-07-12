@@ -95,7 +95,7 @@
                 class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Reporte Proveedor</a>
     </div>
     <div class="graficas-demo">
-        <p class="titulo-charts">Demo Graficas, SEDENA (Google Charts)</p>
+        <p class="titulo-charts">Demo Graficas, SEDENA (Google Charts con mySQL)</p>
         <form>
             <div class="form-group row forms-charts">
                 <div class="col-sm-3">
