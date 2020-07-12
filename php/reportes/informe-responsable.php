@@ -577,6 +577,8 @@
             </table>
             <p><strong>&nbsp;</strong></p>
             <p><strong>&nbsp;</strong></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <p><strong>Tabla de s&iacute;ntesis de participantes<span style="color: #808080;"> (</span></strong><span
                     style="color: #808080;">Se genera con los datos capturados)</span></p>
             <table >

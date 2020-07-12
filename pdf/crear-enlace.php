@@ -7,7 +7,7 @@ use Dompdf\Dompdf;
 
 
 
- $html=file_get_contents_curl("http://localhost/proyecto-sedena/php/reportes/reporte-enlace.html");
+ $html=file_get_contents_curl("http://localhost/proyecto-sedena/php/reportes/reporte-enlace.php");
 
 
  
