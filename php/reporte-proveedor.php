@@ -66,7 +66,7 @@
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <div class="info-doc">
-            <h1><span style="color: #008000;">Reporte de Tarea del Proveedor</span></h1>
+            <h1><span style="color: #63A537;">Reporte de Tarea del Proveedor</span></h1>
             <p><span style="color: #808080;">Salida de impresi&oacute;n o archivo pdf la da el sistema. Llenada por el
                     <strong>Proveedor</strong></span></p>
             <p><span style="color: #808080;">Proveedor lo entrega impreso o en pdf, pero no captura en el sistema

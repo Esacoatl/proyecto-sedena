@@ -1,0 +1,39 @@
+.exports-demo {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-top: 100px;
+}
+
+.titulo-exports {
+    font-weight: bold;
+    font-size: 36px;
+    color: #63A537;
+    padding-left: 10%;
+}
+
+.titulo-charts {
+    font-weight: bold;
+    font-size: 36px;
+    color: #63A537;
+    padding-left: 28%;
+}
+
+.graficas-demo {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    padding-top: 100px;
+}
+
+.forms-charts {
+    padding-left: 15%;
+}
+
+.btn-search {
+    padding-top: 30px;
+}
+
+.chart-draw {
+    padding-left: 22.5%;
+}
