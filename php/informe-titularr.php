@@ -317,9 +317,53 @@
             <p><span style="color: #808080;">Se genera autom&aacute;ticamente con los datos capturados
                     de las Tareas</span></p>
             <div>
-                <img src="https://i.imgur.com/jHOBawl.png" alt="" style="width: 600px; padding-left: 8%;">
-                <p>&nbsp;</p>
+                <script>
+                    document.write('<img src="https://image-charts.com/chart?' +
+                        'chbh=a&' +
+                        'chco=ffac19%2C63a537&' +
+                        //datos de la grafica
+                        'chd=t' +
+                        '%3A' + '1' +
+                        '%2C' + '5' +
+                        '%2C' + '15' +
+                        '%2C' + '10' +
+
+                        '%7C' + '2' +
+                        '%2C' + '4' +
+                        '%2C' + '10' +
+                        '%2C' + '7' +
+
+                        '%7C' + '1' +
+                        '%2C' + '1' +
+                        '%2C' + '7' +
+                        '%2C' + '5' +
+
+                        '%7C' + '1' +
+                        '%2C' + '2' +
+                        '%2C' + '3' +
+                        '%2C' + '1' +
+                        //-----
+                        '&' +
+                        //labels de la grafica
+                        'chdl=20%20a%2030%7C%2031%20a%2040%7C%2041%20a%2050%7C%2051%20a%2060' +
+                        //-----
+                        '&' +
+                        'chds=0%2C120&' +
+                        'chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&' +
+                        'chma=0%2C0%2C10%2C10&' +
+                        // tamano
+                        'chs=700x150' +
+                        //-----
+                        '&' +
+                        //tipo de grafica
+                        'cht=bvg' +
+                        //-----
+                        '&' +
+                        'chxs=0%2C000000%2C0%2C0%2C_&' +
+                        'chxt=y">')
+                </script>
             </div>
+            <p>&nbsp;</p>
             <p><strong>Tabla de s&iacute;ntesis de participantes <span style="color: #808080;">(</span></strong><span
                     style="color: #808080;">Se genera con los datos capturados)</span></p>
             <table>
@@ -565,9 +609,85 @@
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <div>
-                <img src="https://i.imgur.com/EeuNnQg.png" alt="" style="width: 200px;">
-                <img src="https://i.imgur.com/Ju9Rtwz.png" alt="" style="width: 425px;">
+                <script>
+                    document.write('<img src="https://image-charts.com/chart?' +
+                        'chbh=a&' +
+                        'chco=63a537&' +
+                        //datos de la grafica (deberan ser cambiados por datos PHP)
+                        'chd=t' +
+                        '%3A' + '50' +
+                        '%2C' + '5' +
+                        '%2C' + '7' +
+                        '%2C' + '1' +
+                        '%2C' + '2' +
+                        //-----
+                        '&' +
+                        //labels de la grafica
+                        'chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal' +
+                        //-----
+                        '&' +
+                        'chds=0%2C120&' +
+                        'chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&' +
+                        'chma=0%2C0%2C10%2C10&' +
+                        // tamano
+                        'chs=200x200' +
+                        //-----
+                        '&' +
+                        //tipo de grafica
+                        'cht=p' +
+                        //-----
+                        '&' +
+                        'chxs=0%2C000000%2C0%2C0%2C_&' +
+                        'chxt=y">')
+                </script>
+                <script>
+                    document.write('<img src="https://image-charts.com/chart?' +
+                        'chbh=a&' +
+                        'chco=ffac19%2C63a537&' +
+                        //datos de la grafica (deberan ser cambiados por datos PHP) t%3A5%2C5%2C4%2C5%7C10%2C11%2C10%2C9%7C15%2C16%2C17%2C15%7C15%2C15%2C15%2C15
+                        'chd=t' +
+                        '%3A' + '5' +
+                        '%2C' + '5' +
+                        '%2C' + '4' +
+                        '%2C' + '5' +
+
+                        '%7C' + '10' +
+                        '%2C' + '11' +
+                        '%2C' + '10' +
+                        '%2C' + '9' +
+
+                        '%7C' + '15' +
+                        '%2C' + '16' +
+                        '%2C' + '17' +
+                        '%2C' + '15' +
+
+                        '%7C' + '15' +
+                        '%2C' + '15' +
+                        '%2C' + '15' +
+                        '%2C' + '15' +
+                        //-----
+                        '&' +
+                        //labels de la grafica
+                        'chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal' +
+                        //-----
+                        '&' +
+                        'chds=0%2C120&' +
+                        'chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&' +
+                        'chma=0%2C0%2C10%2C10&' +
+                        // tamano
+                        'chs=450x200' +
+                        //-----
+                        '&' +
+                        //tipo de grafica
+                        'cht=bhs' +
+                        //-----
+                        '&' +
+                        'chxr=1%2C0%2C100&' +
+                        'chxt=y,x">')
+                </script>
             </div>
+            <p>Grafica 2: 0 = Sede, 1 = Material, 2 = Contenido, 3 = Instructores/as</p>
+            <p><strong>&nbsp;</strong></p>
             <p>Valor general de evaluaci&oacute;n de la subactividad: ____</p>
             <p><strong>&nbsp;</strong></p>
             <div>
@@ -575,7 +695,63 @@
                             sede)&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; </strong></p>
                 <p><span style="color: #808080;">Se genera autom&aacute;ticamente con datos capturados de
                         las Tareas</span></p>
-                <img src="https://i.imgur.com/hhbZlcW.png" alt="" style="width: 575px; padding-left: 12%;">
+                <script>
+                    document.write('<img src="https://image-charts.com/chart?' +
+                        'chbh=a&' +
+                        'chco=63a537&' +
+                        //datos de la grafica (deberan ser cambiados por datos PHP) t%3A5%2C5%2C4%2C5%7C10%2C11%2C10%2C9%7C15%2C16%2C17%2C15%7C15%2C15%2C15%2C15
+                        'chd=t' +
+                        '%3A' + '50' +
+                        '%2C' + '50' +
+                        '%2C' + '40' +
+                        '%2C' + '60' +
+                        '%2C' + '70' +
+                        '%2C' + '50' +
+                        '%2C' + '34' +
+                        '%2C' + '56' +
+                        '%2C' + '34' +
+                        '%2C' + '10' +
+                        '%2C' + '34' +
+                        '%2C' + '54' +
+                        '%2C' + '76' +
+                        '%2C' + '32' +
+                        '%2C' + '45' +
+                        '%2C' + '55' +
+                        '%2C' + '60' +
+                        '%2C' + '70' +
+                        '%2C' + '50' +
+                        '%2C' + '34' +
+                        '%2C' + '56' +
+                        '%2C' + '34' +
+                        '%2C' + '10' +
+                        '%2C' + '45' +
+                        '%2C' + '55' +
+                        '%2C' + '60' +
+                        '%2C' + '70' +
+                        '%2C' + '50' +
+                        '%2C' + '34' +
+                        '%2C' + '54' +
+                        '%2C' + '76' +
+                        //-----
+                        '&' +
+                        //labels de la grafica
+                        'chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal' +
+                        //-----
+                        '&' +
+                        'chds=0%2C120&' +
+                        'chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&' +
+                        'chma=0%2C0%2C10%2C10&' +
+                        // tamano
+                        'chs=450x800' +
+                        //-----
+                        '&' +
+                        //tipo de grafica
+                        'cht=bhg' +
+                        //-----
+                        '&' +
+                        'chxr=1%2C0%2C100&' +
+                        'chxt=y,x">')
+                </script>
                 <p>&nbsp;</p>
             </div>
         </div>
