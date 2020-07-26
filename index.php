@@ -32,23 +32,15 @@
             // Crea la grafica a partir de la tabla
             var data = google.visualization.arrayToDataTable([
                 ['Actividades', 'Actividades Esperadas', 'Actividades Presentes'],
-                <?php
-                    $db= new mysqli('localhost', 'root', '', 'graficasedena') or die("No se pudo conectar");
-                    $sql ="select valor1, valor2, valor3 from ejemplodemo";
-                    $respuesta = $db->query($sql) or die($db->error);
-                    while($fila = $respuesta->fetch_assoc()){
-                        echo"['".$fila["valor1"]."', ".$fila["valor2"].", ".$fila["valor3"]."],";
-                    }
-                ?>
-                // Arreglo ejemplo recibido
-                /*['1', 33, 40],
+                 //Arreglo ejemplo recibido
+                ['1', 33, 40],
                 ['2', 117, 96],
                 ['3', 166, 210],
                 ['4', 117, 66],
                 ['5', 66, 21],
                 ['6', 33, 40],
                 ['7', 117, 96],
-                ['8', 150, 190]*/
+                ['8', 150, 190]
             ]);
 
             // Opciones de la grafica

@@ -318,7 +318,7 @@
                     de las Tareas</span></p>
             <div>
                 <script>
-                    document.write('<img src="https://image-charts.com/chart?' +
+                    /*document.write('<img src="https://image-charts.com/chart?' +
                         'chbh=a&' +
                         'chco=ffac19%2C63a537&' +
                         //datos de la grafica
@@ -360,8 +360,9 @@
                         //-----
                         '&' +
                         'chxs=0%2C000000%2C0%2C0%2C_&' +
-                        'chxt=y">')
+                        'chxt=y">')*/
                 </script>
+                <img src="https://image-charts.com/chart?chbh=a&chco=ffac19%2C63a537&chd=t%3A1%2C5%2C15%2C10%7C2%2C4%2C10%2C7%7C1%2C1%2C7%2C5%7C1%2C2%2C3%2C1&chdl=20%20a%2030%7C%2031%20a%2040%7C%2041%20a%2050%7C%2051%20a%2060&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y">
             </div>
             <p>&nbsp;</p>
             <p><strong>Tabla de s&iacute;ntesis de participantes <span style="color: #808080;">(</span></strong><span
@@ -488,10 +489,6 @@
             <p>Avance porcentual de tareas realizadas respecto de las totales: ___%</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
             <h2><span style="color: #99cc00;">Concentrado de avances</span> <span style="color: #808080;">(como
                     informe)</span></h2>
             <p><strong>Tabla concentrada de tareas</strong></p>
@@ -610,7 +607,7 @@
             <p>&nbsp;</p>
             <div>
                 <script>
-                    document.write('<img src="https://image-charts.com/chart?' +
+                    /*document.write('<img src="https://image-charts.com/chart?' +
                         'chbh=a&' +
                         'chco=63a537&' +
                         //datos de la grafica (deberan ser cambiados por datos PHP)
@@ -638,10 +635,11 @@
                         //-----
                         '&' +
                         'chxs=0%2C000000%2C0%2C0%2C_&' +
-                        'chxt=y">')
+                        'chxt=y">')*/
                 </script>
+                <img src="https://image-charts.com/chart?chbh=a&chco=63a537&chd=t%3A50%2C5%2C7%2C1%2C2&chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=200x200&cht=p&chxs=0%2C000000%2C0%2C0%2C_&chxt=y">
                 <script>
-                    document.write('<img src="https://image-charts.com/chart?' +
+                    /*document.write('<img src="https://image-charts.com/chart?' +
                         'chbh=a&' +
                         'chco=ffac19%2C63a537&' +
                         //datos de la grafica (deberan ser cambiados por datos PHP) t%3A5%2C5%2C4%2C5%7C10%2C11%2C10%2C9%7C15%2C16%2C17%2C15%7C15%2C15%2C15%2C15
@@ -683,8 +681,9 @@
                         //-----
                         '&' +
                         'chxr=1%2C0%2C100&' +
-                        'chxt=y,x">')
+                        'chxt=y,x">')*/
                 </script>
+                <img src="https://image-charts.com/chart?chbh=a&chco=ffac19%2C63a537&chd=t%3A5%2C5%2C4%2C5%7C10%2C11%2C10%2C9%7C15%2C16%2C17%2C15%7C15%2C15%2C15%2C15&chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=450x200&cht=bhs&chxr=1%2C0%2C100&chxt=y,x">
             </div>
             <p>Grafica 2: 0 = Sede, 1 = Material, 2 = Contenido, 3 = Instructores/as</p>
             <p><strong>&nbsp;</strong></p>
@@ -696,7 +695,7 @@
                 <p><span style="color: #808080;">Se genera autom&aacute;ticamente con datos capturados de
                         las Tareas</span></p>
                 <script>
-                    document.write('<img src="https://image-charts.com/chart?' +
+                    /*document.write('<img src="https://image-charts.com/chart?' +
                         'chbh=a&' +
                         'chco=63a537&' +
                         //datos de la grafica (deberan ser cambiados por datos PHP) t%3A5%2C5%2C4%2C5%7C10%2C11%2C10%2C9%7C15%2C16%2C17%2C15%7C15%2C15%2C15%2C15
@@ -750,8 +749,9 @@
                         //-----
                         '&' +
                         'chxr=1%2C0%2C100&' +
-                        'chxt=y,x">')
+                        'chxt=y,x">')*/
                 </script>
+                <img src="https://image-charts.com/chart?chbh=a&chco=63a537&chd=t%3A50%2C50%2C40%2C60%2C70%2C50%2C34%2C56%2C34%2C10%2C34%2C54%2C76%2C32%2C45%2C55%2C60%2C70%2C50%2C34%2C56%2C34%2C10%2C45%2C55%2C60%2C70%2C50%2C34%2C54%2C76&chdl=Excelente%7CMuy%20bien%7CBien%7CRegular%7CMal&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=450x800&cht=bhg&chxr=1%2C0%2C100&chxt=y,x">
                 <p>&nbsp;</p>
             </div>
         </div>
