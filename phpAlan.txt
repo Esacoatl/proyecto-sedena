@@ -1,0 +1,9 @@
+            <?php
+                    $db= new mysqli('localhost', 'root', '', 'graficasedena') or die("No se pudo conectar");
+                    $sql ="select valor1, valor2, valor3 from ejemplodemo";
+                    $respuesta = $db->query($sql) or die($db->error);
+                    while($fila = $respuesta->fetch_assoc()){
+                        echo"['".$fila["valor1"]."', ".$fila["valor2"].", ".$fila["valor3"]."],";
+                    }
+                ?>
+
