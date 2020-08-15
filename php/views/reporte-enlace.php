@@ -1,3 +1,53 @@
+<?php
+
+//include_once '../../_conexion/conexion.php';
+
+    $conn = new mysqli("localhost", "root", "", "mirsdn");                
+    if ($conn->connect_error) {
+        die("ERROR: No se puede conectar al servidor: " . $conn->connect_error);
+    }
+
+    //----------------------
+    $resT = $conn->query("SELECT * FROM tareas WHERE id_tarea = 1");
+    $dataT = $resT->fetch_assoc();
+
+    $resC = $conn->query("SELECT * FROM componentes WHERE id_cmt = 1");
+    $dataC = $resC->fetch_assoc();
+
+    $resA = $conn->query("SELECT * FROM actividades WHERE id_act = 1");
+    $dataA = $resA->fetch_assoc();
+
+    $resSub = $conn->query("SELECT * FROM subactividades WHERE id_sbact = 1");
+    $dataSub = $resSub->fetch_assoc();
+
+    $resR = $conn->query("SELECT * FROM regm WHERE id_rm = 1");
+    $dataR = $resR->fetch_assoc();
+
+    $resZ = $conn->query("SELECT * FROM zonam WHERE id_zm = 1");
+    $dataZ = $resZ->fetch_assoc();
+
+    $resTT = $conn->query("SELECT descrip_tipt FROM tipos_tar");
+    //WHERE id_tipt = 1
+    $dataTT = $resTT->fetch_assoc();
+
+    $resDPC = $conn->query("SELECT * FROM duo_pe_cm WHERE id_dpc = 1");
+    $dataDPC = $resDPC->fetch_assoc();
+
+    $resAT = $conn->query("SELECT * FROM avc_tar WHERE id_avt = 1");
+    $dataAT = $resAT->fetch_assoc();
+
+    $resSin = $conn->query("SELECT * FROM sintesis WHERE id_snt = 1");
+    $dataSin = $resSin->fetch_assoc();
+
+    $resET = $conn->query("SELECT * FROM evaluatarea WHERE id_ctar = 1");
+    $dataEt = $resET->fetch_assoc();
+
+    $resETar = $conn->query("SELECT * FROM evidencias_tar WHERE id_evi = 1");
+    $dataETar = $resETar->fetch_assoc();
+
+    $resSer = $conn->query("SELECT * FROM cuadroserv WHERE id_serv = 1");
+    $dataSer = $resSer->fetch_assoc();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +139,11 @@
                             <p><strong>Nombre de Tarea</strong></p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Con su usuario de sede, tiene prellenado de cat&aacute;logo precargado</p>
+                            <p>                        
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -110,13 +164,19 @@
                     </tr>
                     <tr style="color: #808080;">
                         <td>
-                            <p>De tarea tiene esta selecci&oacute;n predefinida de cat&aacute;logo precargado</p>
+                        <?php
+                        if(isset($resC)) { echo $dataC['descipcion_cmt']; };
+                        ?>
                         </td>
                         <td>
-                            <p>De tarea tiene esta selecci&oacute;n predefinida de cat&aacute;logo precargado</p>
+                        <?php
+                        if(isset($resA)) { echo $dataA['descripcion_act']; };
+                        ?>
                         </td>
                         <td>
-                            <p>De tarea tiene esta selecci&oacute;n predefinida de catalogo precargado</p>
+                        <?php
+                        if(isset($resSub)) { echo $dataSub['nombre_sbact']; };
+                        ?>
                         </td>
                     </tr>
                 </tbody>
@@ -131,7 +191,15 @@
                             <p><strong>Fecha o per&iacute;odo de realizaci&oacute;n</strong></p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Calendario (fecha inicial y final)</p>
+                            <p>                        
+                            <?php
+                            if(isset($resT)) 
+                            {   
+                                echo $dataT['fechain_tarea'];
+                                echo $dataT['fechafin_tarea']; 
+                            };
+                            ?>
+                        </p>
                         </td>
                     </tr>
                     <tr>
@@ -139,7 +207,15 @@
                             <p><strong>Horario</strong></p>
                         </td>
                         <td style="color: #808080;">
-                            <p>00:00 AM/PM a 00:00 AM/PM</p>
+                            <p>                        
+                            <?php
+                            if(isset($resT)) 
+                            {   
+                                echo $dataT['horai_tarea'];
+                                echo $dataT['horaf_tarea']; 
+                            };
+                            ?>
+                        </p>
                         </td>
                     </tr>
                     <tr>
@@ -147,7 +223,11 @@
                             <p><strong>Duraci&oacute;n</strong></p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Horas</p>
+                            <p>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['dura_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -155,7 +235,11 @@
                             <p><strong>Responsable</strong></p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Autollenado de cat&aacute;logo de usuarios</p>
+                            <p>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['id_usr_usuarios']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -163,7 +247,11 @@
                             <p><strong>Proveedor </strong>(p.ej. instancia educativa)</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Cat&aacute;logo de proveedores</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['prov_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -185,13 +273,25 @@
                     </tr>
                     <tr style="color: #808080;">
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -220,25 +320,43 @@
                     </tr>
                     <tr style="color: #808080;">
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>                            
+                            <?php
+                            if(isset($resR)) { echo $dataR['denomina_rm']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resZ)) { echo $dataZ['denomina_zm']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resDPC)) { echo $dataDPC['descrip_dpc']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resDPC)) { echo $dataDPC['descrip_dpc']; };
+                            ?>
+                            </p>
                         </td>
                         <td>
-                            <p>Llenado autom&aacute;ticamente por tarea</p>
+                            <p>
+                            <?php
+                            if(isset($resDPC)) { echo $dataDPC['descrip_dpc']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
             <p>&nbsp;</p>
             <h2><span style="color: #99cc00;">Datos que ingresa Enlace</span></h2>
             <table>
@@ -259,7 +377,11 @@
                                     etc.)</span></p>
                         </td>
                         <td style="color: #808080; background-color: #FFF899;">
-                            <p>Txt (50)</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['lugar_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -267,10 +389,11 @@
                             <p><strong>Descripci&oacute;n general de tarea</strong></p>
                         </td>
                         <td style="color: #808080; background-color: #FFF899;">
-                            <p>Txt (300)</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
+                            <p>
+                            <?php
+                            if(isset($resT)) { echo $dataT['lugar_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -536,7 +659,112 @@
                             <p>&nbsp;</p>
                         </td>
                         <td style="background-color: #ffac19;">
-                            <p><strong>50</strong></p>
+                            <p><strong>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['total_snt']; };
+                            ?>
+                            </strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tgeneralh_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="4">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tgeneralm_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="4">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tjefeh_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="4">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tjefem_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="4">
+                        <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tofich_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="4">
+                        <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['toficm_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="3">
+                        <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['ttropah_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="3">
+                        <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['ttropam_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="1">
+                        <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['total_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">
+                            <p>                            
+                            <?php
+                            $suma1 = $dataSin['tgeneralh_snt'] + $dataSin['tgeneralm_snt'];
+                            if(isset($resSin)) { echo $suma1; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="8">
+                            <p>                            
+                            <?php
+                            $suma2 = $dataSin['tjefeh_snt'] + $dataSin['tjefem_snt'];
+                            if(isset($resSin)) { echo $suma2; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="8">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['toto_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="6">
+                            <p>                            
+                            <?php
+                            if(isset($resSin)) { echo $dataSin['tottropa_snt']; };
+                            ?>
+                            </p>
+                        </td>
+                        <td colspan="1">
+                            <p>                            
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -545,31 +773,49 @@
             <h2><span style="color: #99cc00;">Evidencia</span></h2>
             <p><strong>Fotograf&iacute;as: </strong>(trabajo y grupo / productos y alusiva / antes y despu&eacute;s)</p>
             <table style="background-color: #FFF899; color: #808080;">
-                <tbody>
+            <tbody>
                     <tr>
                         <td>
-                            <p>Cargar imagen</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            ?>
+                            </p>
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
                         </td>
                         <td>
-                            <p>Cargar imagen</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            ?>
+                            </p>
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>Panor&aacute;mica</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            ?>
+                            </p>
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
                         </td>
                         <td>
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            ?>
+                            </p>
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
                         </td>
                     </tr>
                 </tbody>
@@ -582,7 +828,12 @@
                             <p><strong>Documento(s) adjunto(s)</strong></p>
                         </td>
                         <td style="background-color: #FFF899; color: #808080;">
-                            <p>Cargar archivo</p>
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -590,7 +841,12 @@
                             <p><strong>Acta circunstanciada</strong></p>
                         </td>
                         <td style="background-color: #FFF899; color: #808080;">
-                            <p>Cargar archivo</p>
+                            <p>                            
+                            <?php
+                            if(isset($resETar)) { echo $dataETar['descrip_evi']; };
+                            if(isset($resETar)) { echo $dataETar['adjunto_evi']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -598,7 +854,11 @@
                             <p><strong>Notas adicionales</strong></p>
                         </td>
                         <td style="background-color: #FFF899; color: #808080;">
-                            <p>Txt (300)</p>
+                            <p>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['notasa_tarea']; };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -612,15 +872,34 @@
                     imprimir, escanear y subir)</span></p>
             <p><strong>&nbsp;</strong></p>
             <p><strong>Acta circunstanciada con motivo de la impartici&oacute;n del</strong></p>
-            <p><span style="color: #ff0000;"><strong>&lt;Nombre de evento de capacitaci&oacute;n&gt;</strong></span></p>
+            <p><span style="color: #ff0000;"><strong>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </strong></span></p>
             <p><strong>&nbsp;</strong></p>
-            <p>En la <span style="color: #ff0000;"><strong>&lt;Sede&gt;,</strong></span> con direcci&oacute;n en <span
-                    style="color: #ff0000;"><strong>&lt;Direcci&oacute;n de sede&gt;,</strong></span> siendo las <span
-                    style="color: #ff0000;"><strong>&lt;00:00 AM/PM&gt;</strong></span> del d&iacute;a&nbsp; <span
-                    style="color: #ff0000;"><strong>&lt;Fecha&gt;</strong>,</span> se levanta la presente Acta en la que
+            <p>En la <span style="color: #ff0000;"><strong>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['id_dpc_duo_pe_cm']; };
+                            ?>
+                            </strong></span> con direcci&oacute;n en <span
+                    style="color: #ff0000;"><strong>                            
+                            <?php
+                            if(isset($resDPC)) { echo $dataDPC['calle_dpc']." ".$dataDPC['num_dpc']." ".$dataDPC['col_dpc']." ".$dataDPC['deleg_dpc']; };
+                            ?>
+                            </strong></span> siendo las <span
+                    style="color: #ff0000;"><strong>
+                    <?php
+                    echo date('d-m-Y H:i');
+                    ?>
+                    </strong></span> se levanta la presente Acta en la que
                 se hace constar que en cumplimiento al convenio celebrado entre la Secretar&iacute;a de la Defensa
                 Nacional (SDN) y la Secretar&iacute;a de Desarrollo Institucional de la UNAM, se llev&oacute; a cabo el
-                <span style="color: #ff0000;"><strong>&lt;Nombre de evento de capacitaci&oacute;n&gt;</strong></span>
+                <span style="color: #ff0000;"><strong>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['nombre_tarea']; };
+                            ?>
+                            </strong></span>
                 contemplado en el <strong>Programa de Igualdad entre Mujeres y Hombres SDN 2020</strong>, queda de
                 manifiesto que se realiz&oacute; bajo las siguientes observaciones:</p>
             <table>
