@@ -1,3 +1,54 @@
+<?php
+
+//include_once '../../_conexion/conexion.php';
+
+    $conn = new mysqli("localhost", "root", "", "mirsdn");                
+    if ($conn->connect_error) {
+        die("ERROR: No se puede conectar al servidor: " . $conn->connect_error);
+    }
+
+    //----------------------
+    $resT = $conn->query("SELECT * FROM tareas WHERE id_tarea = 1");
+    $dataT = $resT->fetch_assoc();
+
+    $resC = $conn->query("SELECT * FROM componentes WHERE id_cmt = 1");
+    $dataC = $resC->fetch_assoc();
+
+    $resA = $conn->query("SELECT * FROM actividades WHERE id_act = 1");
+    $dataA = $resA->fetch_assoc();
+
+    $resSub = $conn->query("SELECT * FROM subactividades WHERE id_sbact = 1");
+    $dataSub = $resSub->fetch_assoc();
+
+    $resR = $conn->query("SELECT * FROM regm WHERE id_rm = 1");
+    $dataR = $resR->fetch_assoc();
+
+    $resZ = $conn->query("SELECT * FROM zonam WHERE id_zm = 1");
+    $dataZ = $resZ->fetch_assoc();
+
+    $resTT = $conn->query("SELECT descrip_tipt FROM tipos_tar");
+    //WHERE id_tipt = 1
+    $dataTT = $resTT->fetch_assoc();
+
+    $resDPC = $conn->query("SELECT * FROM duo_pe_cm WHERE id_dpc = 1");
+    $dataDPC = $resDPC->fetch_assoc();
+
+    $resAT = $conn->query("SELECT * FROM avc_tar WHERE id_avt = 1");
+    $dataAT = $resAT->fetch_assoc();
+
+    $resSin = $conn->query("SELECT * FROM sintesis WHERE id_snt = 1");
+    $dataSin = $resSin->fetch_assoc();
+
+    $resET = $conn->query("SELECT * FROM evaluatarea WHERE id_ctar = 1");
+    $dataEt = $resET->fetch_assoc();
+
+    $resETar = $conn->query("SELECT * FROM evidencias_tar WHERE id_evi = 1");
+    $dataETar = $resETar->fetch_assoc();
+
+    $resSer = $conn->query("SELECT * FROM cuadroserv WHERE id_serv = 1");
+    $dataSer = $resSer->fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -47,6 +47,12 @@
 
     $resSer = $conn->query("SELECT * FROM cuadroserv WHERE id_serv = 1");
     $dataSer = $resSer->fetch_assoc();
+
+    $resG = $conn->query("SELECT * FROM grados WHERE id_g = 1");
+    $dataG = $resG->fetch_assoc();
+
+    $resU = $conn->query("SELECT * FROM usuarios WHERE id_usr = 1");
+    $dataU = $resU->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -195,11 +201,18 @@
                             <?php
                             if(isset($resT)) 
                             {   
-                                echo $dataT['fechain_tarea'];
                                 echo $dataT['fechafin_tarea']; 
                             };
                             ?>
-                        </p>
+                            </p>
+                            <p>                        
+                            <?php
+                            if(isset($resT)) 
+                            {   
+                                echo $dataT['fechain_tarea'];
+                            };
+                            ?>
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -923,7 +936,7 @@
                             <p>___%</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Txt (200)</p>
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
@@ -934,7 +947,7 @@
                             <p>___%</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Txt (200)</p>
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
@@ -945,7 +958,7 @@
                             <p>___%</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Txt (200)</p>
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
@@ -956,7 +969,7 @@
                             <p>___%</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Txt (200)</p>
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
@@ -967,7 +980,7 @@
                             <p>___%</p>
                         </td>
                         <td style="color: #808080;">
-                            <p>Txt (200)</p>
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
@@ -975,8 +988,11 @@
                             <p>Comentarios adicionales</p>
                         </td>
                         <td colspan="2" style="color: #808080;">
-                            <p>Txt (300)</p>
-                            <p>&nbsp;</p>
+                            <p>                            
+                                <?php
+                                if(isset($resT)) { echo $dataT['notasa_tarea']; };
+                                ?>
+                            </p>
                             <p>&nbsp;</p>
                         </td>
                     </tr>
@@ -989,18 +1005,30 @@
                     <tr>
                         <td>
                             <p>Enlace responsable</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
                         </td>
                         <td>
                             <p>Representante de proveedor</p>
                         </td>
                     </tr>
                     <tr>
-                        <td style="color: #ff0000;">
-                            <p>&lt;Grado militar&gt; &lt;Nombre de usuario&gt;</p>
-                            <p>&lt;Puesto de usuario&gt;</p>
+                    <td style="color: #ff0000;">
+                        <p>                            
+                            <?php
+                            if(isset($resG)) { echo $dataG['descripcion_g']; };
+                            ?>
+                        </p>
+                        <p>                            
+                            <?php
+                            if(isset($resU)) { echo $dataU['nombre_usr']; };
+                            if(isset($resU)) { echo $dataU['primerapell_usr']; };
+                            if(isset($resU)) { echo $dataU['segundoapell_usr']; };
+                            ?>
+                        </p>
+                        <p>                            
+                            <?php
+                            if(isset($resT)) { echo $dataT['id_usr_usuarios']; };
+                            ?>
+                        </p>
                         </td>
                         <td>
                             <p><strong>Nombre</strong></p>
